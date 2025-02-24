@@ -13,7 +13,7 @@ export const DogImage = () => {
   return (
     <>
       <div>
-        <p>犬の画像サイト！</p>
+        <h1>犬の画像表示サイト</h1>
         <button onClick={fetchDogImage}>更新</button>
       </div>
       <div>

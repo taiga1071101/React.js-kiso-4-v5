@@ -21,6 +21,11 @@ app.use(express.static(path.join(__dirname, 'dist'), {
   }
 }));
 
+// favicon.icoのリクエストを無視する
+app.get('/favicon.ico', (_req, res) => {
+  res.status(204).end(); // 204 No Content 応答でアイコンのリクエストを無視
+});
+
 app.get('/', (req, res) => {
   // サーバーサイドでReactをレンダリングし、HTMLを生成
   const html = ReactDOMServer.renderToString(React.createElement(App));
